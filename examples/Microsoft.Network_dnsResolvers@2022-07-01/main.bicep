@@ -21,11 +21,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

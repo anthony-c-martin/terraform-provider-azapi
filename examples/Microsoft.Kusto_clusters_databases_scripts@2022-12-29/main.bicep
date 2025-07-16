@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource cluster 'Microsoft.Kusto/clusters@2022-12-29' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]
@@ -21,8 +20,7 @@ resource cluster 'Microsoft.Kusto/clusters@2022-12-29' = {
     publicIPType: 'IPv4'
     publicNetworkAccess: 'Enabled'
     restrictOutboundNetworkAccess: 'Disabled'
-    trustedExternalTenants: [
-    ]
+    trustedExternalTenants: []
   }
   sku: {
     capacity: 1
@@ -36,8 +34,7 @@ resource database 'Microsoft.Kusto/clusters/databases@2022-12-29' = {
   location: location
   name: resource_name
   kind: 'ReadWrite'
-  properties: {
-  }
+  properties: {}
 }
 
 resource script 'Microsoft.Kusto/clusters/databases/scripts@2022-12-29' = {

@@ -20,8 +20,7 @@ resource eventSubscription 'Microsoft.EventGrid/eventSubscriptions@2021-12-01' =
         'Microsoft.Storage.BlobRenamed'
       ]
     }
-    labels: [
-    ]
+    labels: []
     retryPolicy: {
       eventTimeToLiveInMinutes: 144
       maxDeliveryAttempts: 10

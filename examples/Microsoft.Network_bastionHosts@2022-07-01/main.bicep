@@ -52,14 +52,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: 'AzureBastionSubnet'
   properties: {
     addressPrefix: '192.168.1.224/27'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -73,11 +70,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

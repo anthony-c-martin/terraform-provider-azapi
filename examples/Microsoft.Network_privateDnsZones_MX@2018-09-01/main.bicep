@@ -5,8 +5,7 @@ resource MX 'Microsoft.Network/privateDnsZones/MX@2018-09-01' = {
   parent: privateDnsZone
   name: resource_name
   properties: {
-    metadata: {
-    }
+    metadata: {}
     mxRecords: [
       {
         exchange: 'mx1.contoso.com'

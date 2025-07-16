@@ -13,8 +13,7 @@ resource A 'Microsoft.Network/privateDnsZones/A@2018-09-01' = {
         ipv4Address: '1.2.3.4'
       }
     ]
-    metadata: {
-    }
+    metadata: {}
     ttl: 300
   }
 }

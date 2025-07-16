@@ -71,51 +71,66 @@ function tfToBicep(input: string): string {
   return output;
 }
 
-function convertToBicep(input: any, indentLevel: number) {
-  let output = '';
+function convertToBicep(input: any, indentLevel: number): string {
+  if (input === null || input === undefined) {
+    return 'null';
+  }
+
   if (Array.isArray(input)) {
-    output += line('[');
-    for (const item of input) {
-      output += line(indent(indentLevel + 2, convertToBicep(item, indentLevel + 2)));
+    if (input.length === 0) {
+      return '[]';
     }
-    output += indent(indentLevel, ']');
-  } else if (typeof input === 'object' && input !== null) {
-    output += line('{');
-    for (const [key, value] of Object.entries(input)) {
-      output += line(indent(indentLevel + 2, objectProperty(key, value, indentLevel + 2)));
+
+    return [
+      '[',
+      ...input.map(item => indent(indentLevel + 2, convertToBicep(item, indentLevel + 2))),
+      indent(indentLevel, ']')
+    ].join('\n');
+  }
+
+  if (typeof input === 'object') {
+    if (Object.keys(input).length === 0) {
+      return '{}';
     }
-    output += indent(indentLevel, '}');
-  } else if (typeof input === 'number' && Number.isInteger(input)) {
-    output += `${input}`
-  } else if (typeof input === 'number') {
-    output += `json('${input}')`
-  } else if (typeof input === 'boolean') {
-    output += `${input}`
-  } else if (typeof input === 'string') {
-    input = input
+
+    return [
+      '{',
+      ...Object.entries(input).map(
+        ([key, value]) => indent(indentLevel + 2, objectProperty(key, value, indentLevel + 2))
+      ),
+      indent(indentLevel, '}')
+    ].join('\n');
+  }
+
+  if (typeof input === 'number') {
+    return Number.isInteger(input) ? `${input}` : `json('${input}')`;
+  }
+
+  if (typeof input === 'boolean') {
+    return `${input}`;
+  }
+
+  if (typeof input === 'string') {
+    let str = input
       .replace(/\${var\.([a-zA-Z0-9_]+)}/g, '${$1}')
       .replace(/\${azapi_resource\.(\w+)\.output(\.\w+(\.\w+)+)}/g, '${$1$2}')
       .replace(/\${azapi_resource\.(\w+(\.\w+)+)}/g, '${$1}')
       .replace(/\${resourceGroup\.location}/g, '${resourceGroup().location}');
 
-    if (input.startsWith('${') && input.endsWith('}')) {
-      // This is a variable reference, we need to keep it as is
-      output += input.substr(2, input.length - 3);
-    } else {
-      input = input.replace('\\', '\\\\')
-        .replace(/\r/g, '\\r')
-        .replace(/\n/g, '\\n')
-        .replace(/\t/g, '\\t')
-        .replace(/'/g, "\\'");
-      output += `'${input}'`
+    if (str.startsWith('${') && str.endsWith('}')) {
+      return str.slice(2, -1);
     }
-  } else if (input === null || input === undefined) {
-    output += 'null';
-  } else {
-    throw new Error(`Unsupported type: ${typeof input} for value: ${input}`);
+
+    str = str
+      .replace(/\\/g, '\\\\')
+      .replace(/\r/g, '\\r')
+      .replace(/\n/g, '\\n')
+      .replace(/\t/g, '\\t')
+      .replace(/'/g, "\\'");
+    return `'${str}'`;
   }
 
-  return output;
+  throw new Error(`Unsupported type: ${typeof input} for value: ${input}`);
 }
 
 function indent(level: number, input: string) {
@@ -148,17 +163,21 @@ async function main() {
       writeFileSync(bicepPath, bicepContents, 'utf8');
 
       const compileResult = await bicep.compile({ path: bicepPath });
-      if (!compileResult.success) {
-        const errors = compileResult.diagnostics
-          .filter(x => x.level === 'Error')
-          .map(d => `[${d.code}] ${d.message}`);
+      const diagnostics = compileResult.diagnostics
+        .map(d => `[${d.level} ${d.code}] ${d.message}`);
 
-        throw new Error(`Bicep compilation failed for ${bicepPath}: \n${errors.join('\n')}`);
+      if (compileResult.success) {
+        markdown += 'Result: success\n\n';
+      } else {
+        markdown += 'Result: failed (invalid bicep)\n\n';
       }
-
-      markdown += 'Result: success\n';
+      
+      if (diagnostics.length > 0) {
+        markdown += 'Diagnostics:\n';
+        markdown += `\`\`\`\n${diagnostics.join('\n')}\n\`\`\`\n`;
+      }
     } catch (error) {
-      markdown += 'Result: failed\n';
+      markdown += 'Result: failed (unexpected error)\n\n';
       markdown += `\`\`\`\n${error}\n\`\`\`\n`;
     }
   }

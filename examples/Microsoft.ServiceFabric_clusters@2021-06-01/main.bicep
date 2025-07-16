@@ -5,15 +5,12 @@ resource cluster 'Microsoft.ServiceFabric/clusters@2021-06-01' = {
   location: location
   name: resource_name
   properties: {
-    addOnFeatures: [
-    ]
-    fabricSettings: [
-    ]
+    addOnFeatures: []
+    fabricSettings: []
     managementEndpoint: 'http://example:80'
     nodeTypes: [
       {
-        capacities: {
-        }
+        capacities: {}
         clientConnectionEndpointPort: 2020
         durabilityLevel: 'Bronze'
         httpGatewayEndpointPort: 80
@@ -21,8 +18,7 @@ resource cluster 'Microsoft.ServiceFabric/clusters@2021-06-01' = {
         isStateless: false
         multipleAvailabilityZones: false
         name: 'first'
-        placementProperties: {
-        }
+        placementProperties: {}
         vmInstanceCount: 3
       }
     ]

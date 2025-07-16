@@ -5,8 +5,7 @@ resource accountFilter 'Microsoft.Media/mediaServices/accountFilters@2022-08-01'
   parent: mediaService
   name: 'Filter-1'
   properties: {
-    tracks: [
-    ]
+    tracks: []
   }
 }
 

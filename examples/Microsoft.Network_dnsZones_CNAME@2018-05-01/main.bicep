@@ -9,10 +9,8 @@ resource CNAME 'Microsoft.Network/dnsZones/CNAME@2018-05-01' = {
       cname: '${resource_name}.webpubsub.azure.com'
     }
     TTL: 3600
-    metadata: {
-    }
-    targetResource: {
-    }
+    metadata: {}
+    targetResource: {}
   }
 }
 

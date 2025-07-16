@@ -5,11 +5,9 @@ resource IotHub 'Microsoft.Devices/IotHubs@2022-04-30-preview' = {
   location: location
   name: resource_name
   properties: {
-    cloudToDevice: {
-    }
+    cloudToDevice: {}
     enableFileUploadNotifications: false
-    messagingEndpoints: {
-    }
+    messagingEndpoints: {}
     routing: {
       fallbackRoute: {
         condition: 'true'
@@ -20,8 +18,7 @@ resource IotHub 'Microsoft.Devices/IotHubs@2022-04-30-preview' = {
         source: 'DeviceMessages'
       }
     }
-    storageEndpoints: {
-    }
+    storageEndpoints: {}
   }
   sku: {
     capacity: 1

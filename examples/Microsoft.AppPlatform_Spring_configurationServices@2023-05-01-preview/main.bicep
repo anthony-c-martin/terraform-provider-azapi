@@ -17,8 +17,7 @@ resource configurationService 'Microsoft.AppPlatform/Spring/configurationService
   name: 'default'
   properties: {
     settings: {
-      gitProperty: {
-      }
+      gitProperty: {}
     }
   }
 }

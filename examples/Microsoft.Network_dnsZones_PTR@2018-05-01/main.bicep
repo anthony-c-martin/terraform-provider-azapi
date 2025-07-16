@@ -14,8 +14,7 @@ resource PTR 'Microsoft.Network/dnsZones/PTR@2018-05-01' = {
       }
     ]
     TTL: 300
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

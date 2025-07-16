@@ -21,8 +21,7 @@ resource runbook 'Microsoft.Automation/automationAccounts/runbooks@2019-06-01' =
   name: 'Get-AzureVMTutorial'
   properties: {
     description: 'This is a test runbook for terraform acceptance test'
-    draft: {
-    }
+    draft: {}
     logActivityTrace: 0
     logProgress: true
     logVerbose: true
@@ -36,8 +35,7 @@ resource webHook 'Microsoft.Automation/automationAccounts/webHooks@2015-10-31' =
   properties: {
     expiryTime: '2025-06-30T04:27:24Z'
     isEnabled: true
-    parameters: {
-    }
+    parameters: {}
     runOn: ''
     runbook: {
       name: runbook.name

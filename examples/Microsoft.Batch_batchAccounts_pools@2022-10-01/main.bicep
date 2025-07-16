@@ -36,8 +36,7 @@ resource pool 'Microsoft.Batch/batchAccounts/pools@2022-10-01' = {
     }
     displayName: ''
     interNodeCommunication: 'Enabled'
-    metadata: [
-    ]
+    metadata: []
     scaleSettings: {
       fixedScale: {
         nodeDeallocationOption: ''

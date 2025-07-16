@@ -5,30 +5,19 @@ resource actionGroup 'Microsoft.Insights/actionGroups@2023-01-01' = {
   location: 'global'
   name: resource_name
   properties: {
-    armRoleReceivers: [
-    ]
-    automationRunbookReceivers: [
-    ]
-    azureAppPushReceivers: [
-    ]
-    azureFunctionReceivers: [
-    ]
-    emailReceivers: [
-    ]
+    armRoleReceivers: []
+    automationRunbookReceivers: []
+    azureAppPushReceivers: []
+    azureFunctionReceivers: []
+    emailReceivers: []
     enabled: true
-    eventHubReceivers: [
-    ]
+    eventHubReceivers: []
     groupShortName: 'acctestag1'
-    itsmReceivers: [
-    ]
-    logicAppReceivers: [
-    ]
-    smsReceivers: [
-    ]
-    voiceReceivers: [
-    ]
-    webhookReceivers: [
-    ]
+    itsmReceivers: []
+    logicAppReceivers: []
+    smsReceivers: []
+    voiceReceivers: []
+    webhookReceivers: []
   }
 }
 
@@ -36,30 +25,19 @@ resource actionGroup2 'Microsoft.Insights/actionGroups@2023-01-01' = {
   location: 'global'
   name: resource_name
   properties: {
-    armRoleReceivers: [
-    ]
-    automationRunbookReceivers: [
-    ]
-    azureAppPushReceivers: [
-    ]
-    azureFunctionReceivers: [
-    ]
-    emailReceivers: [
-    ]
+    armRoleReceivers: []
+    automationRunbookReceivers: []
+    azureAppPushReceivers: []
+    azureFunctionReceivers: []
+    emailReceivers: []
     enabled: true
-    eventHubReceivers: [
-    ]
+    eventHubReceivers: []
     groupShortName: 'acctestag2'
-    itsmReceivers: [
-    ]
-    logicAppReceivers: [
-    ]
-    smsReceivers: [
-    ]
-    voiceReceivers: [
-    ]
-    webhookReceivers: [
-    ]
+    itsmReceivers: []
+    logicAppReceivers: []
+    smsReceivers: []
+    voiceReceivers: []
+    webhookReceivers: []
   }
 }
 
@@ -71,8 +49,7 @@ resource activityLogAlert 'Microsoft.Insights/activityLogAlerts@2020-10-01' = {
       actionGroups: [
         {
           actionGroupId: actionGroup.id
-          webhookProperties: {
-          }
+          webhookProperties: {}
         }
         {
           actionGroupId: actionGroup2.id

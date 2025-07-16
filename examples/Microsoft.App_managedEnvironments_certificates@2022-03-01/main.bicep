@@ -22,8 +22,7 @@ resource managedEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' = {
         sharedKey: data.azapi_resource_action.sharedKeys.output.primarySharedKey
       }
     }
-    vnetConfiguration: {
-    }
+    vnetConfiguration: {}
   }
 }
 

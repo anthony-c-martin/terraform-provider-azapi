@@ -5,11 +5,9 @@ resource ExternalEndpoint 'Microsoft.Network/trafficManagerProfiles/ExternalEndp
   parent: trafficManagerProfile
   name: resource_name
   properties: {
-    customHeaders: [
-    ]
+    customHeaders: []
     endpointStatus: 'Enabled'
-    subnets: [
-    ]
+    subnets: []
     target: 'www.example.com'
     weight: 3
   }
@@ -24,8 +22,7 @@ resource trafficManagerProfile 'Microsoft.Network/trafficManagerProfiles@2018-08
       ttl: 30
     }
     monitorConfig: {
-      expectedStatusCodeRanges: [
-      ]
+      expectedStatusCodeRanges: []
       intervalInSeconds: 30
       path: '/'
       port: 443

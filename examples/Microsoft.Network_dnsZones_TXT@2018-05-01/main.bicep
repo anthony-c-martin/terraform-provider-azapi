@@ -20,8 +20,7 @@ resource TXT 'Microsoft.Network/dnsZones/TXT@2018-05-01' = {
         ]
       }
     ]
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

@@ -83,8 +83,7 @@ resource backupPolicy 'Microsoft.DataProtection/backupVaults/backupPolicies@2022
               dataStoreType: 'VaultStore'
               objectType: 'DataStoreInfoBase'
             }
-            targetDataStoreCopySettings: [
-            ]
+            targetDataStoreCopySettings: []
           }
         ]
         name: 'Default'
@@ -97,8 +96,7 @@ resource backupPolicy 'Microsoft.DataProtection/backupVaults/backupPolicies@2022
 resource backupVault 'Microsoft.DataProtection/backupVaults@2022-04-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

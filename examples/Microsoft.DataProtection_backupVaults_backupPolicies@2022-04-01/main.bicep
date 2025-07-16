@@ -52,8 +52,7 @@ resource backupPolicy 'Microsoft.DataProtection/backupVaults/backupPolicies@2022
               dataStoreType: 'VaultStore'
               objectType: 'DataStoreInfoBase'
             }
-            targetDataStoreCopySettings: [
-            ]
+            targetDataStoreCopySettings: []
           }
         ]
         name: 'Default'

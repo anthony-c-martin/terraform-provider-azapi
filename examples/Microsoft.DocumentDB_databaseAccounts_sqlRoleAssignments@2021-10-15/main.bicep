@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource cluster 'Microsoft.Kusto/clusters@2023-05-02' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]
@@ -21,8 +20,7 @@ resource cluster 'Microsoft.Kusto/clusters@2023-05-02' = {
     publicIPType: 'IPv4'
     publicNetworkAccess: 'Enabled'
     restrictOutboundNetworkAccess: 'Disabled'
-    trustedExternalTenants: [
-    ]
+    trustedExternalTenants: []
   }
   sku: {
     capacity: 1
@@ -36,8 +34,7 @@ resource database 'Microsoft.Kusto/clusters/databases@2023-05-02' = {
   location: location
   name: resource_name
   kind: 'ReadWrite'
-  properties: {
-  }
+  properties: {}
 }
 
 resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
@@ -45,8 +42,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
   name: resource_name
   kind: 'GlobalDocumentDB'
   properties: {
-    capabilities: [
-    ]
+    capabilities: []
     consistencyPolicy: {
       defaultConsistencyLevel: 'Session'
       maxIntervalInSeconds: 5
@@ -60,8 +56,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -71,11 +66,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 

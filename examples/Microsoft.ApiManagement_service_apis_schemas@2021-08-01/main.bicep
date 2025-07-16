@@ -9,8 +9,7 @@ resource api 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
     apiType: 'http'
     apiVersion: ''
     apiVersionDescription: ''
-    authenticationSettings: {
-    }
+    authenticationSettings: {}
     description: ''
     displayName: 'api1'
     path: 'api1'
@@ -38,8 +37,7 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
   location: location
   name: resource_name
   properties: {
-    certificates: [
-    ]
+    certificates: []
     customProperties: {
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30': 'false'
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10': 'false'

@@ -62,10 +62,8 @@ resource vpnServerConfiguration 'Microsoft.Network/vpnServerConfigurations@2022-
     vpnAuthenticationTypes: [
       'Certificate'
     ]
-    vpnClientIpsecPolicies: [
-    ]
-    vpnClientRevokedCertificates: [
-    ]
+    vpnClientIpsecPolicies: []
+    vpnClientRevokedCertificates: []
     vpnClientRootCertificates: [
       {
         name: 'DigiCert-Federated-ID-Root-CA'

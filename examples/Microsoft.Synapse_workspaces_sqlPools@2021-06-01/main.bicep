@@ -26,8 +26,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {
   location: location
   name: resource_name
   kind: 'StorageV2'
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard_LRS'
   }
@@ -36,8 +35,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {
 resource workspace 'Microsoft.Synapse/workspaces@2021-06-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

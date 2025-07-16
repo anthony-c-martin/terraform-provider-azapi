@@ -38,8 +38,7 @@ resource subscription 'Microsoft.ServiceBus/namespaces/topics/subscriptions@2021
   parent: topic
   name: resource_name
   properties: {
-    clientAffineProperties: {
-    }
+    clientAffineProperties: {}
     deadLetteringOnFilterEvaluationExceptions: true
     deadLetteringOnMessageExpiration: false
     enableBatchedOperations: false

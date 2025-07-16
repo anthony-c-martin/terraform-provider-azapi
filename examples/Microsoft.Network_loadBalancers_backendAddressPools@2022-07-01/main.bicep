@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource backendAddressPool 'Microsoft.Network/loadBalancers/backendAddressPools@2022-07-01' = {
   parent: loadBalancer
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource loadBalancer 'Microsoft.Network/loadBalancers@2022-07-01' = {

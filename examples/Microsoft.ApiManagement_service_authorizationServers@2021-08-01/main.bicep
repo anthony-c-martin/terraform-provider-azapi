@@ -9,8 +9,7 @@ resource authorizationServer 'Microsoft.ApiManagement/service/authorizationServe
     authorizationMethods: [
       'GET'
     ]
-    clientAuthenticationMethod: [
-    ]
+    clientAuthenticationMethod: []
     clientId: '42424242-4242-4242-4242-424242424242'
     clientRegistrationEndpoint: 'https://azacceptance.hashicorptest.com/client/register'
     clientSecret: ''
@@ -23,8 +22,7 @@ resource authorizationServer 'Microsoft.ApiManagement/service/authorizationServe
     resourceOwnerPassword: ''
     resourceOwnerUsername: ''
     supportState: false
-    tokenBodyParameters: [
-    ]
+    tokenBodyParameters: []
   }
 }
 
@@ -32,8 +30,7 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
   location: location
   name: resource_name
   properties: {
-    certificates: [
-    ]
+    certificates: []
     customProperties: {
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30': 'false'
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10': 'false'

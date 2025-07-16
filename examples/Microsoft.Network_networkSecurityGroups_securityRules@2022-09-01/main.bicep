@@ -5,8 +5,7 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2022-07-0
   location: location
   name: 'mi-security-group1-230630034008554952'
   properties: {
-    securityRules: [
-    ]
+    securityRules: []
   }
 }
 

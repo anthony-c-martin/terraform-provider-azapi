@@ -17,8 +17,7 @@ resource app 'Microsoft.AppPlatform/Spring/apps@2023-05-01-preview' = {
   location: location
   name: resource_name
   properties: {
-    customPersistentDisks: [
-    ]
+    customPersistentDisks: []
     enableEndToEndTLS: false
     public: false
   }
@@ -29,15 +28,12 @@ resource deployment 'Microsoft.AppPlatform/Spring/apps/deployments@2023-05-01-pr
   name: resource_name
   properties: {
     deploymentSettings: {
-      environmentVariables: {
-      }
+      environmentVariables: {}
     }
     source: {
       customContainer: {
-        args: [
-        ]
-        command: [
-        ]
+        args: []
+        command: []
         containerImage: 'springio/gs-spring-boot-docker'
         languageFramework: ''
         server: 'docker.io'

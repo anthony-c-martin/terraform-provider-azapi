@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource managedCluster 'Microsoft.ContainerService/managedClusters@2023-04-02-preview' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

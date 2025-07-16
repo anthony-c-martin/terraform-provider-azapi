@@ -5,15 +5,13 @@ resource metricAlert 'Microsoft.Insights/metricAlerts@2018-03-01' = {
   location: 'global'
   name: resource_name
   properties: {
-    actions: [
-    ]
+    actions: []
     autoMitigate: true
     criteria: {
       allOf: [
         {
           criterionType: 'StaticThresholdCriterion'
-          dimensions: [
-          ]
+          dimensions: []
           metricName: 'UsedCapacity'
           metricNamespace: 'Microsoft.Storage/storageAccounts'
           name: 'Metric1'

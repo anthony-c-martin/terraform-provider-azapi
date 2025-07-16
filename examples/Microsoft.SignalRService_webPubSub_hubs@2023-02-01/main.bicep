@@ -6,16 +6,14 @@ resource hub 'Microsoft.SignalRService/webPubSub/hubs@2023-02-01' = {
   name: resource_name
   properties: {
     anonymousConnectPolicy: 'Deny'
-    eventListeners: [
-    ]
+    eventListeners: []
   }
 }
 
 resource webPubSub 'Microsoft.SignalRService/webPubSub@2023-02-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

@@ -27,8 +27,7 @@ resource flexibleServer 'Microsoft.DBforMySQL/flexibleServers@2021-05-01' = {
     highAvailability: {
       mode: 'Disabled'
     }
-    network: {
-    }
+    network: {}
     version: '5.7'
   }
   sku: {

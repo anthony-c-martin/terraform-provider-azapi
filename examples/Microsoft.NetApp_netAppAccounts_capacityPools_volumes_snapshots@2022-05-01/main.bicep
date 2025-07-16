@@ -15,8 +15,7 @@ resource netAppAccount 'Microsoft.NetApp/netAppAccounts@2022-05-01' = {
   location: location
   name: resource_name
   properties: {
-    activeDirectories: [
-    ]
+    activeDirectories: []
   }
 }
 
@@ -41,10 +40,8 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
     ]
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -58,11 +55,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 
@@ -73,11 +68,9 @@ resource volume 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2022-05-0
   properties: {
     avsDataStore: 'Disabled'
     creationToken: 'my-unique-file-path-230630033642692134'
-    dataProtection: {
-    }
+    dataProtection: {}
     exportPolicy: {
-      rules: [
-      ]
+      rules: []
     }
     networkFeatures: 'Basic'
     protocolTypes: [
@@ -91,7 +84,6 @@ resource volume 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2022-05-0
     usageThreshold: 107374182400
     volumeType: ''
   }
-  zones: [
-  ]
+  zones: []
 }
 

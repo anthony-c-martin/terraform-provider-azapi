@@ -7,8 +7,7 @@ resource fhirService 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-0
   name: resource_name
   kind: 'fhir-R4'
   properties: {
-    acrConfiguration: {
-    }
+    acrConfiguration: {}
     authenticationConfiguration: {
       audience: 'https://acctestfhir.fhir.azurehealthcareapis.com'
       authority: 'https://login.microsoftonline.com/${data.azurerm_client_config.current.tenant_id}'
@@ -16,12 +15,9 @@ resource fhirService 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-0
     }
     corsConfiguration: {
       allowCredentials: false
-      headers: [
-      ]
-      methods: [
-      ]
-      origins: [
-      ]
+      headers: []
+      methods: []
+      origins: []
     }
   }
 }
@@ -32,8 +28,7 @@ resource fhirService2 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-
   name: resource_name
   kind: 'fhir-R4'
   properties: {
-    acrConfiguration: {
-    }
+    acrConfiguration: {}
     authenticationConfiguration: {
       audience: fhirService.properties.authenticationConfiguration.audience
       authority: fhirService.properties.authenticationConfiguration.authority
@@ -41,12 +36,9 @@ resource fhirService2 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-
     }
     corsConfiguration: {
       allowCredentials: false
-      headers: [
-      ]
-      methods: [
-      ]
-      origins: [
-      ]
+      headers: []
+      methods: []
+      origins: []
     }
   }
 }

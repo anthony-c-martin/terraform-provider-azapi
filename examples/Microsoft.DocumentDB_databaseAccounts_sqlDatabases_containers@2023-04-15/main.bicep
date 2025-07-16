@@ -5,8 +5,7 @@ resource container 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/container
   parent: sqlDatabase
   name: resource_name
   properties: {
-    options: {
-    }
+    options: {}
     resource: {
       id: 'test-containerWest Europe'
       partitionKey: {
@@ -24,8 +23,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
   name: resource_name
   kind: 'GlobalDocumentDB'
   properties: {
-    capabilities: [
-    ]
+    capabilities: []
     consistencyPolicy: {
       defaultConsistencyLevel: 'BoundedStaleness'
       maxIntervalInSeconds: 10
@@ -39,8 +37,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -50,11 +47,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 

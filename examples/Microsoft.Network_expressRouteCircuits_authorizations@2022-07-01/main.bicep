@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource authorization 'Microsoft.Network/expressRouteCircuits/authorizations@2022-07-01' = {
   parent: expressRouteCircuit
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource expressRouteCircuit 'Microsoft.Network/expressRouteCircuits@2022-07-01' = {

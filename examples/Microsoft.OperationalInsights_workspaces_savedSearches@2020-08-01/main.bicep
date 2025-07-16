@@ -9,8 +9,7 @@ resource savedSearch 'Microsoft.OperationalInsights/workspaces/savedSearches@202
     displayName: 'Create or Update Saved Search Test'
     functionAlias: ''
     query: 'Heartbeat | summarize Count() by Computer | take a'
-    tags: [
-    ]
+    tags: []
   }
 }
 

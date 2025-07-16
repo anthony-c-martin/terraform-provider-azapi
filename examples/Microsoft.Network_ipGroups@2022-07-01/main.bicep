@@ -5,8 +5,7 @@ resource ipGroup 'Microsoft.Network/ipGroups@2022-07-01' = {
   location: location
   name: resource_name
   properties: {
-    ipAddresses: [
-    ]
+    ipAddresses: []
   }
   tags: {
     env: 'prod'

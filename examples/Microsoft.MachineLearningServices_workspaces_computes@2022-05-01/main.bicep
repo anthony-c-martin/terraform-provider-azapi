@@ -45,8 +45,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
   location: location
   name: resource_name
   properties: {
-    accessPolicies: [
-    ]
+    accessPolicies: []
     createMode: 'default'
     enablePurgeProtection: true
     enableRbacAuthorization: false
@@ -66,8 +65,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
 resource workspace 'Microsoft.MachineLearningServices/workspaces@2022-05-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

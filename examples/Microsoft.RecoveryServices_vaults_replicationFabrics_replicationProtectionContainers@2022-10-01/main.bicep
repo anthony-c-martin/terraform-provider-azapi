@@ -15,8 +15,7 @@ resource replicationFabric 'Microsoft.RecoveryServices/vaults/replicationFabrics
 resource replicationProtectionContainer 'Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers@2022-10-01' = {
   parent: replicationFabric
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource vault 'Microsoft.RecoveryServices/vaults@2022-10-01' = {

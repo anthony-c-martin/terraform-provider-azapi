@@ -5,8 +5,7 @@ param resource_name string = 'acctest0001'
 resource automationAccount 'Microsoft.Automation/automationAccounts@2023-11-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

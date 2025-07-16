@@ -18,8 +18,7 @@ resource netAppAccount 'Microsoft.NetApp/netAppAccounts@2022-05-01' = {
   location: location
   name: resource_name
   properties: {
-    activeDirectories: [
-    ]
+    activeDirectories: []
   }
   tags: {
     SkipASMAzSecPack: 'true'
@@ -31,14 +30,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: 'GatewaySubnet'
   properties: {
     addressPrefix: '10.6.1.0/24'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -57,10 +53,8 @@ resource subnet2 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
     ]
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -74,11 +68,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
   tags: {
     SkipASMAzSecPack: 'true'
@@ -92,8 +84,7 @@ resource volume 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2022-05-0
   properties: {
     avsDataStore: 'Enabled'
     creationToken: 'my-unique-file-path-230630034120103726'
-    dataProtection: {
-    }
+    dataProtection: {}
     exportPolicy: {
       rules: [
         {
@@ -121,7 +112,6 @@ resource volume 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2022-05-0
   tags: {
     SkipASMAzSecPack: 'true'
   }
-  zones: [
-  ]
+  zones: []
 }
 

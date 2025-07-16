@@ -20,8 +20,7 @@ resource SRV 'Microsoft.Network/dnsZones/SRV@2018-05-01' = {
       }
     ]
     TTL: 300
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

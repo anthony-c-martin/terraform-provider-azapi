@@ -7,8 +7,7 @@ param resource_name string = 'acctest0001'
 resource networkGroup 'Microsoft.Network/networkManagers/networkGroups@2024-05-01' = {
   parent: networkManager
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource networkManager 'Microsoft.Network/networkManagers@2024-05-01' = {
@@ -20,8 +19,7 @@ resource networkManager 'Microsoft.Network/networkManagers@2024-05-01' = {
       'Routing'
     ]
     networkManagerScopes: {
-      managementGroups: [
-      ]
+      managementGroups: []
       subscriptions: [
         '/subscriptions/${data.azapi_client_config.current.subscription_id}'
       ]
@@ -84,11 +82,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-05-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

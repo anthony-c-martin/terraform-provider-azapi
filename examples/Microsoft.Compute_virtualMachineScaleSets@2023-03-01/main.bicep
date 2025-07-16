@@ -6,14 +6,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: 'internal'
   properties: {
     addressPrefix: '10.0.2.0/24'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -21,8 +18,7 @@ resource virtualMachineScaleSet 'Microsoft.Compute/virtualMachineScaleSets@2023-
   location: location
   name: resource_name
   properties: {
-    additionalCapabilities: {
-    }
+    additionalCapabilities: {}
     doNotRunExtensionsOnOverprovisionedVMs: false
     orchestrationMode: 'Uniform'
     overprovision: true
@@ -52,8 +48,7 @@ resource virtualMachineScaleSet 'Microsoft.Compute/virtualMachineScaleSets@2023-
             name: 'example'
             properties: {
               dnsSettings: {
-                dnsServers: [
-                ]
+                dnsServers: []
               }
               enableAcceleratedNetworking: false
               enableIPForwarding: false
@@ -61,14 +56,10 @@ resource virtualMachineScaleSet 'Microsoft.Compute/virtualMachineScaleSets@2023-
                 {
                   name: 'internal'
                   properties: {
-                    applicationGatewayBackendAddressPools: [
-                    ]
-                    applicationSecurityGroups: [
-                    ]
-                    loadBalancerBackendAddressPools: [
-                    ]
-                    loadBalancerInboundNatPools: [
-                    ]
+                    applicationGatewayBackendAddressPools: []
+                    applicationSecurityGroups: []
+                    loadBalancerBackendAddressPools: []
+                    loadBalancerInboundNatPools: []
                     primary: true
                     privateIPAddressVersion: 'IPv4'
                     subnet: {
@@ -97,13 +88,11 @@ resource virtualMachineScaleSet 'Microsoft.Compute/virtualMachineScaleSets@2023-
             ]
           }
         }
-        secrets: [
-        ]
+        secrets: []
       }
       priority: 'Regular'
       storageProfile: {
-        dataDisks: [
-        ]
+        dataDisks: []
         imageReference: {
           offer: 'UbuntuServer'
           publisher: 'Canonical'
@@ -139,11 +128,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

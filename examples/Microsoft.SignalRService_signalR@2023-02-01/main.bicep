@@ -5,8 +5,7 @@ resource signalR 'Microsoft.SignalRService/signalR@2023-02-01' = {
   location: location
   name: resource_name
   properties: {
-    cors: {
-    }
+    cors: {}
     disableAadAuth: false
     disableLocalAuth: false
     features: [
@@ -51,8 +50,7 @@ resource signalR 'Microsoft.SignalRService/signalR@2023-02-01' = {
       clientCertEnabled: false
     }
     upstream: {
-      templates: [
-      ]
+      templates: []
     }
   }
   sku: {

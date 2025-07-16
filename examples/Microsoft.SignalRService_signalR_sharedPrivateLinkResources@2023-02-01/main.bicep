@@ -15,8 +15,7 @@ resource signalR 'Microsoft.SignalRService/signalR@2023-02-01' = {
   location: location
   name: resource_name
   properties: {
-    cors: {
-    }
+    cors: {}
     disableAadAuth: false
     disableLocalAuth: false
     features: [
@@ -61,8 +60,7 @@ resource signalR 'Microsoft.SignalRService/signalR@2023-02-01' = {
       clientCertEnabled: false
     }
     upstream: {
-      templates: [
-      ]
+      templates: []
     }
   }
   sku: {
@@ -88,8 +86,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
           secrets: [
             'Set'
           ]
-          storage: [
-          ]
+          storage: []
         }
         tenantId: data.azurerm_client_config.current.tenant_id
       }

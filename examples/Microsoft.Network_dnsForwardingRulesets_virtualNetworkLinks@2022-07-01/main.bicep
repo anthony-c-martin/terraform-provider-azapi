@@ -49,10 +49,8 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
     ]
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -66,11 +64,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

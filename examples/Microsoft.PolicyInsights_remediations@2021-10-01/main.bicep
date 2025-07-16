@@ -24,8 +24,7 @@ resource remediation 'Microsoft.PolicyInsights/remediations@2021-10-01' = {
   name: resource_name
   properties: {
     filters: {
-      locations: [
-      ]
+      locations: []
     }
     policyAssignmentId: policyAssignment.id
     policyDefinitionReferenceId: ''

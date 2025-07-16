@@ -26,8 +26,7 @@ resource iotConnector 'Microsoft.HealthcareApis/workspaces/iotConnectors@2022-12
   properties: {
     deviceMapping: {
       content: {
-        template: [
-        ]
+        template: []
         templateType: 'CollectionContent'
       }
     }

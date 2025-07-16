@@ -7,8 +7,7 @@ resource scheduledAction 'Microsoft.CostManagement/scheduledActions@2022-10-01' 
   properties: {
     displayName: 'CostByServiceViewerz3k'
     fileDestination: {
-      fileFormats: [
-      ]
+      fileFormats: []
     }
     notification: {
       message: ''

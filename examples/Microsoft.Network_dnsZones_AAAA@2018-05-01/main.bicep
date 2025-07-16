@@ -14,10 +14,8 @@ resource AAAA 'Microsoft.Network/dnsZones/AAAA@2018-05-01' = {
       }
     ]
     TTL: 300
-    metadata: {
-    }
-    targetResource: {
-    }
+    metadata: {}
+    targetResource: {}
   }
 }
 

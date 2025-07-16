@@ -5,8 +5,7 @@ resource PTR 'Microsoft.Network/privateDnsZones/PTR@2018-09-01' = {
   parent: privateDnsZone
   name: resource_name
   properties: {
-    metadata: {
-    }
+    metadata: {}
     ptrRecords: [
       {
         ptrdname: 'test2.contoso.com'

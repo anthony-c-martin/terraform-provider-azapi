@@ -32,11 +32,9 @@ resource softwareUpdateConfiguration 'Microsoft.Automation/automationAccounts/so
     updateConfiguration: {
       duration: 'PT2H'
       linux: {
-        excludedPackageNameMasks: [
-        ]
+        excludedPackageNameMasks: []
         includedPackageClassifications: 'Security'
-        includedPackageNameMasks: [
-        ]
+        includedPackageNameMasks: []
         rebootSetting: 'IfRequired'
       }
       operatingSystem: 'Linux'

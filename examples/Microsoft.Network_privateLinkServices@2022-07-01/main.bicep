@@ -27,12 +27,10 @@ resource privateLinkService 'Microsoft.Network/privateLinkServices@2022-07-01' =
   name: resource_name
   properties: {
     autoApproval: {
-      subscriptions: [
-      ]
+      subscriptions: []
     }
     enableProxyProtocol: false
-    fqdns: [
-    ]
+    fqdns: []
     ipConfigurations: [
       {
         name: 'primaryIpConfiguration-230630033653892379'
@@ -53,8 +51,7 @@ resource privateLinkService 'Microsoft.Network/privateLinkServices@2022-07-01' =
       }
     ]
     visibility: {
-      subscriptions: [
-      ]
+      subscriptions: []
     }
   }
 }
@@ -81,14 +78,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: resource_name
   properties: {
     addressPrefix: '10.5.4.0/24'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Disabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -102,11 +96,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

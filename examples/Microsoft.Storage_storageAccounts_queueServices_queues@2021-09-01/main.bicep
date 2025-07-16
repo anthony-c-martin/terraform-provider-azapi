@@ -13,8 +13,7 @@ resource queue 'Microsoft.Storage/storageAccounts/queueServices/queues@2022-09-0
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard_LRS'
   }

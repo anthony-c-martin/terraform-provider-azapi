@@ -8,8 +8,7 @@ resource CNAME 'Microsoft.Network/privateDnsZones/CNAME@2018-09-01' = {
     cnameRecord: {
       cname: 'contoso.com'
     }
-    metadata: {
-    }
+    metadata: {}
     ttl: 300
   }
 }

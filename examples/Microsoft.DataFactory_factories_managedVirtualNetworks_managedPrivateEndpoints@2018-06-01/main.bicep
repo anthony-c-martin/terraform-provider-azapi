@@ -5,8 +5,7 @@ resource factory 'Microsoft.DataFactory/factories@2018-06-01' = {
   location: location
   name: resource_name
   properties: {
-    globalParameters: {
-    }
+    globalParameters: {}
     publicNetworkAccess: 'Enabled'
     repoConfiguration: null
   }
@@ -15,8 +14,7 @@ resource factory 'Microsoft.DataFactory/factories@2018-06-01' = {
 resource managedVirtualNetwork 'Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01' = {
   parent: factory
   name: 'default'
-  properties: {
-  }
+  properties: {}
 }
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {

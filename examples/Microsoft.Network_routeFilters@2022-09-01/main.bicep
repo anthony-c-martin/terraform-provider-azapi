@@ -5,8 +5,7 @@ resource routeFilter 'Microsoft.Network/routeFilters@2022-09-01' = {
   location: location
   name: resource_name
   properties: {
-    rules: [
-    ]
+    rules: []
   }
 }
 

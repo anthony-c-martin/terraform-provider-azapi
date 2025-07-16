@@ -15,8 +15,7 @@ resource batchConfiguration 'Microsoft.Logic/integrationAccounts/batchConfigurat
 resource integrationAccount 'Microsoft.Logic/integrationAccounts@2019-05-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard'
   }

@@ -15,8 +15,7 @@ resource provisioningService 'Microsoft.Devices/provisioningServices@2022-02-05'
   properties: {
     allocationPolicy: 'Hashed'
     enableDataResidency: false
-    iotHubs: [
-    ]
+    iotHubs: []
     publicNetworkAccess: 'Enabled'
   }
   sku: {

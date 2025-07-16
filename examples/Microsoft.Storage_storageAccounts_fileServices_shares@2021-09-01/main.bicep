@@ -11,8 +11,7 @@ resource share 'Microsoft.Storage/storageAccounts/fileServices/shares@2022-09-01
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard_LRS'
   }

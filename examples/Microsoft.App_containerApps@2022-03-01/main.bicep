@@ -12,26 +12,22 @@ resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
     template: {
       containers: [
         {
-          env: [
-          ]
+          env: []
           image: 'jackofallops/azure-containerapps-python-acctest:v0.0.1'
           name: 'acctest-cont-230630032906865620'
-          probes: [
-          ]
+          probes: []
           resources: {
             cpu: json('0.25')
             ephemeralStorage: '1Gi'
             memory: '0.5Gi'
           }
-          volumeMounts: [
-          ]
+          volumeMounts: []
         }
       ]
       scale: {
         maxReplicas: 10
       }
-      volumes: [
-      ]
+      volumes: []
     }
   }
 }
@@ -47,8 +43,7 @@ resource managedEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' = {
         sharedKey: data.azapi_resource_action.sharedKeys.output.primarySharedKey
       }
     }
-    vnetConfiguration: {
-    }
+    vnetConfiguration: {}
   }
 }
 

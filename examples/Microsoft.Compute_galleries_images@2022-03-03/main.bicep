@@ -17,8 +17,7 @@ resource image 'Microsoft.Compute/galleries/images@2022-03-03' = {
     architecture: 'x64'
     description: ''
     disallowed: {
-      diskTypes: [
-      ]
+      diskTypes: []
     }
     features: null
     hyperVGeneration: 'V1'
@@ -31,10 +30,8 @@ resource image 'Microsoft.Compute/galleries/images@2022-03-03' = {
     osType: 'Linux'
     privacyStatementUri: ''
     recommended: {
-      memory: {
-      }
-      vCPUs: {
-      }
+      memory: {}
+      vCPUs: {}
     }
     releaseNoteUri: ''
   }

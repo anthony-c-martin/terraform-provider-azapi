@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource account 'Microsoft.Purview/accounts@2021-07-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

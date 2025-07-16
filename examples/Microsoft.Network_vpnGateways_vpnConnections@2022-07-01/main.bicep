@@ -46,8 +46,7 @@ resource vpnConnection 'Microsoft.Network/vpnGateways/vpnConnections@2022-07-01'
           useLocalAzureIpAddress: false
           usePolicyBasedTrafficSelectors: false
           vpnConnectionProtocolType: 'IKEv2'
-          vpnGatewayCustomBgpAddresses: [
-          ]
+          vpnGatewayCustomBgpAddresses: []
           vpnLinkConnectionMode: 'Default'
           vpnSiteLink: {
             id: data.azapi_resource_id.link1.id
@@ -64,8 +63,7 @@ resource vpnConnection 'Microsoft.Network/vpnGateways/vpnConnections@2022-07-01'
           useLocalAzureIpAddress: false
           usePolicyBasedTrafficSelectors: false
           vpnConnectionProtocolType: 'IKEv2'
-          vpnGatewayCustomBgpAddresses: [
-          ]
+          vpnGatewayCustomBgpAddresses: []
           vpnLinkConnectionMode: 'Default'
           vpnSiteLink: {
             id: data.azapi_resource_id.link2.id

@@ -10,8 +10,7 @@ resource networkManager 'Microsoft.Network/networkManagers@2022-09-01' = {
       'SecurityAdmin'
     ]
     networkManagerScopes: {
-      managementGroups: [
-      ]
+      managementGroups: []
       subscriptions: [
         '/subscriptions/${data.azapi_client_config.current.subscription_id}'
       ]

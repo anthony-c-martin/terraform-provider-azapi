@@ -34,8 +34,7 @@ resource runbook 'Microsoft.Automation/automationAccounts/runbooks@2019-06-01' =
   name: 'Get-AzureVMTutorial'
   properties: {
     description: 'This is a test runbook for terraform acceptance test'
-    draft: {
-    }
+    draft: {}
     logActivityTrace: 0
     logProgress: true
     logVerbose: true

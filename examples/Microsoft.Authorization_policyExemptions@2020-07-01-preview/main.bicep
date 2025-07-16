@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource policyAssignment 'Microsoft.Authorization/policyAssignments@2022-06-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]
@@ -55,8 +54,7 @@ resource policyExemption 'Microsoft.Authorization/policyExemptions@2020-07-01-pr
   properties: {
     exemptionCategory: 'Mitigated'
     policyAssignmentId: policyAssignment.id
-    policyDefinitionReferenceIds: [
-    ]
+    policyDefinitionReferenceIds: []
   }
 }
 

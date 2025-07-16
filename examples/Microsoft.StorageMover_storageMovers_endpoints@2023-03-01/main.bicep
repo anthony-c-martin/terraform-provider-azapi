@@ -15,7 +15,6 @@ resource endpoint 'Microsoft.StorageMover/storageMovers/endpoints@2023-03-01' = 
 resource storageMover 'Microsoft.StorageMover/storageMovers@2023-03-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 

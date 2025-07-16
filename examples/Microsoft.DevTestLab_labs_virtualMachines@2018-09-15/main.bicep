@@ -26,8 +26,7 @@ resource virtualMachine 'Microsoft.DevTestLab/labs/virtualMachines@2018-09-15' =
     isAuthenticationWithSshKey: false
     labSubnetName: data.azapi_resource_id.subnet.name
     labVirtualNetworkId: virtualNetwork.id
-    networkInterface: {
-    }
+    networkInterface: {}
     notes: ''
     osType: 'Windows'
     password: 'Pa$w0rd1234!'

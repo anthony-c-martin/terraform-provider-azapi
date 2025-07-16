@@ -26,8 +26,7 @@ resource workbookTemplate 'Microsoft.Insights/workbookTemplates@2020-11-20' = {
           type: 1
         }
       ]
-      styleSettings: {
-      }
+      styleSettings: {}
       version: 'Notebook/1.0'
     }
   }

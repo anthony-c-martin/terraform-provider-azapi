@@ -13,10 +13,8 @@ resource alertRule 'Microsoft.SecurityInsights/alertRules@2022-10-01-preview' = 
     severity: 'High'
     suppressionDuration: 'PT5H'
     suppressionEnabled: false
-    tactics: [
-    ]
-    techniques: [
-    ]
+    tactics: []
+    techniques: []
   }
 }
 

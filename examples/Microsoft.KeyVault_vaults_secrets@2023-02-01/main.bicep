@@ -5,8 +5,7 @@ resource vault 'Microsoft.KeyVault/vaults@2023-02-01' = {
   location: location
   name: resource_name
   properties: {
-    accessPolicies: [
-    ]
+    accessPolicies: []
     enableSoftDelete: true
     sku: {
       family: 'A'

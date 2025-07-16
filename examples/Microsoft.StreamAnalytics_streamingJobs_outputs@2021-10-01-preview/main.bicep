@@ -60,8 +60,7 @@ resource streamingJob 'Microsoft.StreamAnalytics/streamingJobs@2020-03-01' = {
   location: location
   name: resource_name
   properties: {
-    cluster: {
-    }
+    cluster: {}
     compatibilityLevel: '1.0'
     contentStoragePolicy: 'SystemAccount'
     dataLocale: 'en-GB'

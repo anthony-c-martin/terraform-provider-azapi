@@ -16,8 +16,7 @@ resource service 'Microsoft.ApiManagement/service@2021-08-01' = {
   location: location
   name: resource_name
   properties: {
-    certificates: [
-    ]
+    certificates: []
     customProperties: {
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30': 'false'
       'Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10': 'false'

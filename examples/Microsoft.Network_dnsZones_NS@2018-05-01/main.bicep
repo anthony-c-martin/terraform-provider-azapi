@@ -14,8 +14,7 @@ resource N 'Microsoft.Network/dnsZones/NS@2018-05-01' = {
       }
     ]
     TTL: 300
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

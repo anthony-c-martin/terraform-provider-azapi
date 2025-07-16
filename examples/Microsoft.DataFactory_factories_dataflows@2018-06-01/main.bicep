@@ -13,8 +13,7 @@ resource dataflow 'Microsoft.DataFactory/factories/dataflows@2018-06-01' = {
         {
           description: ''
           linkedService: {
-            parameters: {
-            }
+            parameters: {}
             referenceName: linkedservice.name
             type: 'LinkedServiceReference'
           }
@@ -25,8 +24,7 @@ resource dataflow 'Microsoft.DataFactory/factories/dataflows@2018-06-01' = {
         {
           description: ''
           linkedService: {
-            parameters: {
-            }
+            parameters: {}
             referenceName: linkedservice.name
             type: 'LinkedServiceReference'
           }

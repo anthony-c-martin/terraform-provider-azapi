@@ -43,8 +43,7 @@ resource webHook 'Microsoft.ContainerRegistry/registries/webHooks@2021-08-01-pre
     actions: [
       'push'
     ]
-    customHeaders: {
-    }
+    customHeaders: {}
     scope: ''
     serviceUri: 'https://mywebhookreceiver.example/mytag'
     status: 'enabled'

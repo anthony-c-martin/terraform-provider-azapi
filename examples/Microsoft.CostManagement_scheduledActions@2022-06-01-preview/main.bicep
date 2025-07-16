@@ -7,8 +7,7 @@ resource scheduledAction 'Microsoft.CostManagement/scheduledActions@2022-06-01-p
   properties: {
     displayName: 'acctest 230630032939736168'
     fileDestination: {
-      fileFormats: [
-      ]
+      fileFormats: []
     }
     notification: {
       message: 'Oops, cost anomaly'

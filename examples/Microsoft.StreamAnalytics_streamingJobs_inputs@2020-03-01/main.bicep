@@ -5,11 +5,9 @@ resource IotHub 'Microsoft.Devices/IotHubs@2022-04-30-preview' = {
   location: location
   name: resource_name
   properties: {
-    cloudToDevice: {
-    }
+    cloudToDevice: {}
     enableFileUploadNotifications: false
-    messagingEndpoints: {
-    }
+    messagingEndpoints: {}
     routing: {
       fallbackRoute: {
         condition: 'true'
@@ -20,8 +18,7 @@ resource IotHub 'Microsoft.Devices/IotHubs@2022-04-30-preview' = {
         source: 'DeviceMessages'
       }
     }
-    storageEndpoints: {
-    }
+    storageEndpoints: {}
   }
   sku: {
     capacity: 1
@@ -44,8 +41,7 @@ resource input 'Microsoft.StreamAnalytics/streamingJobs/inputs@2020-03-01' = {
       type: 'Microsoft.Devices/IotHubs'
     }
     serialization: {
-      properties: {
-      }
+      properties: {}
       type: 'Avro'
     }
     type: 'Stream'
@@ -56,8 +52,7 @@ resource streamingJob 'Microsoft.StreamAnalytics/streamingJobs@2020-03-01' = {
   location: location
   name: resource_name
   properties: {
-    cluster: {
-    }
+    cluster: {}
     compatibilityLevel: '1.0'
     contentStoragePolicy: 'SystemAccount'
     dataLocale: 'en-GB'

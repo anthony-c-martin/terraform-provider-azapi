@@ -26,8 +26,7 @@ resource fhirDestination 'Microsoft.HealthcareApis/workspaces/iotConnectors/fhir
   properties: {
     fhirMapping: {
       content: {
-        template: [
-        ]
+        template: []
         templateType: 'CollectionFhirTemplate'
       }
     }
@@ -42,8 +41,7 @@ resource fhirService 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-0
   name: resource_name
   kind: 'fhir-R4'
   properties: {
-    acrConfiguration: {
-    }
+    acrConfiguration: {}
     authenticationConfiguration: {
       audience: 'https://acctestfhir.fhir.azurehealthcareapis.com'
       authority: 'https://login.microsoftonline.com/${data.azurerm_client_config.current.tenant_id}'
@@ -51,12 +49,9 @@ resource fhirService 'Microsoft.HealthcareApis/workspaces/fhirServices@2022-12-0
     }
     corsConfiguration: {
       allowCredentials: false
-      headers: [
-      ]
-      methods: [
-      ]
-      origins: [
-      ]
+      headers: []
+      methods: []
+      origins: []
     }
   }
 }
@@ -68,8 +63,7 @@ resource iotConnector 'Microsoft.HealthcareApis/workspaces/iotConnectors@2022-12
   properties: {
     deviceMapping: {
       content: {
-        template: [
-        ]
+        template: []
         templateType: 'CollectionContent'
       }
     }

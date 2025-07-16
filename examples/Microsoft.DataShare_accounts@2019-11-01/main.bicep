@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource account 'Microsoft.DataShare/accounts@2019-11-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

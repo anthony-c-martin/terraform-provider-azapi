@@ -5,14 +5,12 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2022-07-01' =
   location: location
   name: resource_name
   properties: {
-    authenticationCertificates: [
-    ]
+    authenticationCertificates: []
     backendAddressPools: [
       {
         name: data.azapi_resource_id.backendAddressPool.name
         properties: {
-          backendAddresses: [
-          ]
+          backendAddresses: []
         }
       }
     ]
@@ -20,21 +18,18 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2022-07-01' =
       {
         name: data.azapi_resource_id.backendHttpSettingsCollection.name
         properties: {
-          authenticationCertificates: [
-          ]
+          authenticationCertificates: []
           cookieBasedAffinity: 'Disabled'
           path: ''
           pickHostNameFromBackendAddress: false
           port: 80
           protocol: 'Http'
           requestTimeout: 1
-          trustedRootCertificates: [
-          ]
+          trustedRootCertificates: []
         }
       }
     ]
-    customErrorConfigurations: [
-    ]
+    customErrorConfigurations: []
     enableHttp2: false
     frontendIPConfigurations: [
       {
@@ -69,8 +64,7 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2022-07-01' =
       {
         name: data.azapi_resource_id.httpListener.name
         properties: {
-          customErrorConfigurations: [
-          ]
+          customErrorConfigurations: []
           frontendIPConfiguration: {
             id: data.azapi_resource_id.frontendIPConfiguration.id
           }
@@ -82,12 +76,9 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2022-07-01' =
         }
       }
     ]
-    privateLinkConfigurations: [
-    ]
-    probes: [
-    ]
-    redirectConfigurations: [
-    ]
+    privateLinkConfigurations: []
+    probes: []
+    redirectConfigurations: []
     requestRoutingRules: [
       {
         name: '${virtualNetwork.name}-rqrt'
@@ -106,25 +97,18 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2022-07-01' =
         }
       }
     ]
-    rewriteRuleSets: [
-    ]
+    rewriteRuleSets: []
     sku: {
       capacity: 2
       name: 'Standard_v2'
       tier: 'Standard_v2'
     }
-    sslCertificates: [
-    ]
-    sslPolicy: {
-    }
-    sslProfiles: [
-    ]
-    trustedClientCertificates: [
-    ]
-    trustedRootCertificates: [
-    ]
-    urlPathMaps: [
-    ]
+    sslCertificates: []
+    sslPolicy: {}
+    sslProfiles: []
+    trustedClientCertificates: []
+    trustedRootCertificates: []
+    urlPathMaps: []
   }
 }
 
@@ -150,14 +134,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: 'subnet-230630033653837171'
   properties: {
     addressPrefix: '10.0.0.0/24'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Disabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -171,11 +152,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

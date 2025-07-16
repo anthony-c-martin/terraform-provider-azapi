@@ -25,8 +25,7 @@ resource scheduledQueryRule 'Microsoft.Insights/scheduledQueryRules@2018-04-16' 
     description: ''
     enabled: 'true'
     source: {
-      authorizedResources: [
-      ]
+      authorizedResources: []
       dataSourceId: workspace.id
     }
   }

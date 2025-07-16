@@ -27,8 +27,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
           secrets: [
             'Set'
           ]
-          storage: [
-          ]
+          storage: []
         }
         tenantId: data.azurerm_client_config.current.tenant_id
       }

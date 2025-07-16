@@ -62,8 +62,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
   location: location
   name: resource_name
   properties: {
-    accessPolicies: [
-    ]
+    accessPolicies: []
     createMode: 'default'
     enableRbacAuthorization: false
     enableSoftDelete: true

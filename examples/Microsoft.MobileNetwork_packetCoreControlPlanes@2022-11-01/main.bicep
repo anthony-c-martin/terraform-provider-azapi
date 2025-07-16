@@ -25,8 +25,7 @@ resource packetCoreControlPlane 'Microsoft.MobileNetwork/packetCoreControlPlanes
   location: location
   name: resource_name
   properties: {
-    controlPlaneAccessInterface: {
-    }
+    controlPlaneAccessInterface: {}
     localDiagnosticsAccess: {
       authenticationType: 'AAD'
     }
@@ -50,7 +49,6 @@ resource site 'Microsoft.MobileNetwork/mobileNetworks/sites@2022-11-01' = {
   parent: mobileNetwork
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 

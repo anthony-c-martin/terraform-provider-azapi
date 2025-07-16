@@ -18,7 +18,6 @@ resource ExpressRoutePort 'Microsoft.Network/ExpressRoutePorts@2022-07-01' = {
 resource authorization 'Microsoft.Network/expressRoutePorts/authorizations@2022-07-01' = {
   parent: ExpressRoutePort
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 

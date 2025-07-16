@@ -6,8 +6,7 @@ resource searchService 'Microsoft.Search/searchServices@2022-09-01' = {
   name: resource_name
   properties: {
     authOptions: {
-      apiKeyOnly: {
-      }
+      apiKeyOnly: {}
     }
     disableLocalAuth: false
     encryptionWithCmk: {
@@ -15,8 +14,7 @@ resource searchService 'Microsoft.Search/searchServices@2022-09-01' = {
     }
     hostingMode: 'default'
     networkRuleSet: {
-      ipRules: [
-      ]
+      ipRules: []
     }
     partitionCount: 1
     publicNetworkAccess: 'Enabled'

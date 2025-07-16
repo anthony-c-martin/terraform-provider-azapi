@@ -5,8 +5,7 @@ resource configurationProfile 'Microsoft.Automanage/configurationProfiles@2022-0
   location: location
   name: resource_name
   properties: {
-    configuration: {
-    }
+    configuration: {}
   }
 }
 

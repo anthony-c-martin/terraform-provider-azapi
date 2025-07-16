@@ -61,8 +61,7 @@ resource nodeType 'Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-05-01'
       endPort: 9000
       startPort: 7000
     }
-    capacities: {
-    }
+    capacities: {}
     dataDiskSizeGB: 130
     dataDiskType: 'Standard_LRS'
     ephemeralPorts: {
@@ -72,15 +71,13 @@ resource nodeType 'Microsoft.ServiceFabric/managedClusters/nodeTypes@2021-05-01'
     isPrimary: true
     isStateless: false
     multiplePlacementGroups: false
-    placementProperties: {
-    }
+    placementProperties: {}
     vmImageOffer: 'WindowsServer'
     vmImagePublisher: 'MicrosoftWindowsServer'
     vmImageSku: '2016-Datacenter'
     vmImageVersion: 'latest'
     vmInstanceCount: 5
-    vmSecrets: [
-    ]
+    vmSecrets: []
     vmSize: 'Standard_DS2_v2'
   }
 }

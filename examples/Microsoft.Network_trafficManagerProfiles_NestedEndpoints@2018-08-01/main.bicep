@@ -5,12 +5,10 @@ resource NestedEndpoint 'Microsoft.Network/trafficManagerProfiles/NestedEndpoint
   parent: trafficManagerProfile
   name: resource_name
   properties: {
-    customHeaders: [
-    ]
+    customHeaders: []
     endpointStatus: 'Enabled'
     minChildEndpoints: 5
-    subnets: [
-    ]
+    subnets: []
     targetResourceId: trafficManagerProfile2.id
     weight: 3
   }
@@ -25,8 +23,7 @@ resource trafficManagerProfile 'Microsoft.Network/trafficManagerProfiles@2018-08
       ttl: 30
     }
     monitorConfig: {
-      expectedStatusCodeRanges: [
-      ]
+      expectedStatusCodeRanges: []
       intervalInSeconds: 30
       path: '/'
       port: 443
@@ -47,8 +44,7 @@ resource trafficManagerProfile2 'Microsoft.Network/trafficManagerProfiles@2018-0
       ttl: 30
     }
     monitorConfig: {
-      expectedStatusCodeRanges: [
-      ]
+      expectedStatusCodeRanges: []
       intervalInSeconds: 30
       path: '/'
       port: 443

@@ -11,8 +11,7 @@ resource botService 'Microsoft.BotService/botServices@2021-05-01-preview' = {
     developerAppInsightsApplicationId: ''
     displayName: resource_name
     endpoint: ''
-    luisAppIds: [
-    ]
+    luisAppIds: []
     luisKey: ''
     msaAppId: data.azurerm_client_config.current.client_id
   }

@@ -5,15 +5,12 @@ resource ApplicationGatewayWebApplicationFirewallPolicy 'Microsoft.Network/Appli
   location: location
   name: resource_name
   properties: {
-    customRules: [
-    ]
+    customRules: []
     managedRules: {
-      exclusions: [
-      ]
+      exclusions: []
       managedRuleSets: [
         {
-          ruleGroupOverrides: [
-          ]
+          ruleGroupOverrides: []
           ruleSetType: 'OWASP'
           ruleSetVersion: '3.1'
         }

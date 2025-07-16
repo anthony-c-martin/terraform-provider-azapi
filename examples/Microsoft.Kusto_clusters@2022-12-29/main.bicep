@@ -14,8 +14,7 @@ resource cluster 'Microsoft.Kusto/clusters@2022-12-29' = {
     publicIPType: 'IPv4'
     publicNetworkAccess: 'Enabled'
     restrictOutboundNetworkAccess: 'Disabled'
-    trustedExternalTenants: [
-    ]
+    trustedExternalTenants: []
   }
   sku: {
     capacity: 1

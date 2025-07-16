@@ -5,8 +5,7 @@ resource container 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/container
   parent: sqlDatabase
   name: resource_name
   properties: {
-    options: {
-    }
+    options: {}
     resource: {
       id: resource_name
       partitionKey: {
@@ -24,8 +23,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
   name: resource_name
   kind: 'GlobalDocumentDB'
   properties: {
-    capabilities: [
-    ]
+    capabilities: []
     consistencyPolicy: {
       defaultConsistencyLevel: 'Session'
       maxIntervalInSeconds: 5
@@ -39,8 +37,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -50,11 +47,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 
@@ -62,8 +57,7 @@ resource sqlDatabase 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-10
   parent: databaseAccount
   name: resource_name
   properties: {
-    options: {
-    }
+    options: {}
     resource: {
       id: resource_name
     }
@@ -74,8 +68,7 @@ resource storedProcedure 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
   parent: container
   name: resource_name
   properties: {
-    options: {
-    }
+    options: {}
     resource: {
       body: '  \tfunction () {\n\t\tvar context = getContext();\n\t\tvar response = context.getResponse();\n\t\tresponse.setBody(\'Hello, World\');\n\t}\n'
       id: resource_name

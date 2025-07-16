@@ -70,8 +70,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
           secrets: [
             'all'
           ]
-          storage: [
-          ]
+          storage: []
         }
         tenantId: data.azurerm_client_config.current.tenant_id
       }
@@ -95,8 +94,7 @@ resource vault 'Microsoft.KeyVault/vaults@2021-10-01' = {
 resource workspace 'Microsoft.MachineLearningServices/workspaces@2022-05-01' = {
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]

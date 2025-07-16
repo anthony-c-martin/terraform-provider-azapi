@@ -14,10 +14,8 @@ resource account 'Microsoft.CognitiveServices/accounts@2022-10-01' = {
   name: resource_name
   kind: 'SpeechServices'
   properties: {
-    allowedFqdnList: [
-    ]
-    apiProperties: {
-    }
+    allowedFqdnList: []
+    apiProperties: {}
     customSubDomainName: 'acctest-cogacc-230630032807723157'
     disableLocalAuth: false
     dynamicThrottlingEnabled: false

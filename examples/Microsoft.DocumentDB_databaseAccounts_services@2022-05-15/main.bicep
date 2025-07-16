@@ -6,8 +6,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
   name: resource_name
   kind: 'GlobalDocumentDB'
   properties: {
-    capabilities: [
-    ]
+    capabilities: []
     consistencyPolicy: {
       defaultConsistencyLevel: 'BoundedStaleness'
       maxIntervalInSeconds: 5
@@ -21,8 +20,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -32,11 +30,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 

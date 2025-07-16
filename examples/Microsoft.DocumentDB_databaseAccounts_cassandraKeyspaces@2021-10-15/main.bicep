@@ -5,8 +5,7 @@ resource cassandraKeyspace 'Microsoft.DocumentDB/databaseAccounts/cassandraKeysp
   parent: databaseAccount
   name: resource_name
   properties: {
-    options: {
-    }
+    options: {}
     resource: {
       id: resource_name
     }
@@ -36,8 +35,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -47,11 +45,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 

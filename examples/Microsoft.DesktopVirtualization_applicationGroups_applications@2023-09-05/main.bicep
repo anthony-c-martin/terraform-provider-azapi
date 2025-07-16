@@ -7,7 +7,7 @@ resource application 'Microsoft.DesktopVirtualization/applicationGroups/applicat
   name: resource_name
   properties: {
     commandLineSetting: 'DoNotAllow'
-    filePath: 'C:\\Program Files\Google\Chrome\Application\chrome.exe'
+    filePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
     showInPortal: false
   }
 }

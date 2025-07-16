@@ -28,8 +28,7 @@ resource CAA 'Microsoft.Network/dnsZones/CAA@2018-05-01' = {
         value: 'example.net'
       }
     ]
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

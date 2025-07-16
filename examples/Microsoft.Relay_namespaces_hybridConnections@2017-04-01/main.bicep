@@ -13,8 +13,7 @@ resource hybridConnection 'Microsoft.Relay/namespaces/hybridConnections@2017-04-
 resource namespace 'Microsoft.Relay/namespaces@2017-04-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard'
     tier: 'Standard'

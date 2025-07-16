@@ -78,8 +78,7 @@ resource scalingPlan 'Microsoft.DesktopVirtualization/scalingPlans@2023-11-01-pr
       }
     ]
     hostPoolType: 'Personal'
-    schedules: [
-    ]
+    schedules: []
     timeZone: 'W. Europe Standard Time'
   }
 }

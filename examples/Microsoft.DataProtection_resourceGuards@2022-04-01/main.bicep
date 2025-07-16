@@ -5,8 +5,7 @@ resource resourceGuard 'Microsoft.DataProtection/resourceGuards@2022-04-01' = {
   location: location
   name: resource_name
   properties: {
-    vaultCriticalOperationExclusionList: [
-    ]
+    vaultCriticalOperationExclusionList: []
   }
 }
 

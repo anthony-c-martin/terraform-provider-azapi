@@ -6,10 +6,8 @@ resource aspireDashboard 'Microsoft.App/managedEnvironments/dotNetComponents@202
   name: resource_name
   properties: {
     componentType: 'AspireDashboard'
-    configurations: [
-    ]
-    serviceBinds: [
-    ]
+    configurations: []
+    serviceBinds: []
   }
 }
 
@@ -24,8 +22,7 @@ resource managedEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' = {
         sharedKey: data.azapi_resource_action.sharedKeys.output.primarySharedKey
       }
     }
-    vnetConfiguration: {
-    }
+    vnetConfiguration: {}
   }
 }
 

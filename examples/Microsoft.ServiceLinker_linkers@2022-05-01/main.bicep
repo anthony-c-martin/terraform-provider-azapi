@@ -16,16 +16,14 @@ resource app 'Microsoft.AppPlatform/Spring/apps@2023-05-01-preview' = {
   parent: Spring
   identity: [
     {
-      identity_ids: [
-      ]
+      identity_ids: []
       type: 'SystemAssigned'
     }
   ]
   location: location
   name: resource_name
   properties: {
-    customPersistentDisks: [
-    ]
+    customPersistentDisks: []
     enableEndToEndTLS: false
     public: false
   }
@@ -36,8 +34,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
   name: resource_name
   kind: 'GlobalDocumentDB'
   properties: {
-    capabilities: [
-    ]
+    capabilities: []
     consistencyPolicy: {
       defaultConsistencyLevel: 'BoundedStaleness'
       maxIntervalInSeconds: 10
@@ -51,8 +48,7 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
     enableAutomaticFailover: false
     enableFreeTier: false
     enableMultipleWriteLocations: false
-    ipRules: [
-    ]
+    ipRules: []
     isVirtualNetworkFilterEnabled: false
     locations: [
       {
@@ -62,11 +58,9 @@ resource databaseAccount 'Microsoft.DocumentDB/databaseAccounts@2021-10-15' = {
       }
     ]
     networkAclBypass: 'None'
-    networkAclBypassResourceIds: [
-    ]
+    networkAclBypassResourceIds: []
     publicNetworkAccess: 'Enabled'
-    virtualNetworkRules: [
-    ]
+    virtualNetworkRules: []
   }
 }
 
@@ -75,8 +69,7 @@ resource deployment 'Microsoft.AppPlatform/Spring/apps/deployments@2023-05-01-pr
   name: 'deploy-q4uff'
   properties: {
     deploymentSettings: {
-      environmentVariables: {
-      }
+      environmentVariables: {}
       resourceRequests: {
         cpu: '1'
         memory: '1Gi'

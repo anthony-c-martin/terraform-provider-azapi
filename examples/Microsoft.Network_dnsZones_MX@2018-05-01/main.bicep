@@ -16,8 +16,7 @@ resource MX 'Microsoft.Network/dnsZones/MX@2018-05-01' = {
       }
     ]
     TTL: 300
-    metadata: {
-    }
+    metadata: {}
   }
 }
 

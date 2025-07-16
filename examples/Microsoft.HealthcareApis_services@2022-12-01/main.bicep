@@ -11,10 +11,8 @@ resource service 'Microsoft.HealthcareApis/services@2022-12-01' = {
         objectId: data.azurerm_client_config.current.object_id
       }
     ]
-    authenticationConfiguration: {
-    }
-    corsConfiguration: {
-    }
+    authenticationConfiguration: {}
+    corsConfiguration: {}
     cosmosDbConfiguration: {
       offerThroughput: 1000
     }

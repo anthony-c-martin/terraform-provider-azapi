@@ -14,8 +14,7 @@ resource pipeline 'Microsoft.DataFactory/factories/pipelines@2018-06-01' = {
   parent: factory
   name: resource_name
   properties: {
-    annotations: [
-    ]
+    annotations: []
     description: ''
     parameters: {
       test: {
@@ -23,8 +22,7 @@ resource pipeline 'Microsoft.DataFactory/factories/pipelines@2018-06-01' = {
         type: 'String'
       }
     }
-    variables: {
-    }
+    variables: {}
   }
 }
 

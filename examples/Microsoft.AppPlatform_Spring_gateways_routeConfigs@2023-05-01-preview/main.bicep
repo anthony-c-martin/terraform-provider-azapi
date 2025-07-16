@@ -17,8 +17,7 @@ resource app 'Microsoft.AppPlatform/Spring/apps@2023-05-01-preview' = {
   location: location
   name: resource_name
   properties: {
-    customPersistentDisks: [
-    ]
+    customPersistentDisks: []
     enableEndToEndTLS: false
     public: false
   }
@@ -44,8 +43,7 @@ resource routeConfig 'Microsoft.AppPlatform/Spring/gateways/routeConfigs@2023-05
   properties: {
     appResourceId: app.id
     protocol: 'HTTP'
-    routes: [
-    ]
+    routes: []
     ssoEnabled: false
   }
 }

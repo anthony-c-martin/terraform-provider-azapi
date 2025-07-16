@@ -28,8 +28,7 @@ resource connectivityConfiguration 'Microsoft.Network/networkManagers/connectivi
 resource networkGroup 'Microsoft.Network/networkManagers/networkGroups@2022-09-01' = {
   parent: networkManager
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource networkManager 'Microsoft.Network/networkManagers@2022-09-01' = {
@@ -42,8 +41,7 @@ resource networkManager 'Microsoft.Network/networkManagers@2022-09-01' = {
       'Connectivity'
     ]
     networkManagerScopes: {
-      managementGroups: [
-      ]
+      managementGroups: []
       subscriptions: [
         data.azapi_resource.subscription.id
       ]
@@ -61,12 +59,10 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
     flowTimeoutInMinutes: 10
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

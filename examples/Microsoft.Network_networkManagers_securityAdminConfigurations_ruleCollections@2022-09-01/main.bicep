@@ -4,8 +4,7 @@ param resource_name string = 'acctest0001'
 resource networkGroup 'Microsoft.Network/networkManagers/networkGroups@2022-09-01' = {
   parent: networkManager
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource networkManager 'Microsoft.Network/networkManagers@2022-09-01' = {
@@ -17,8 +16,7 @@ resource networkManager 'Microsoft.Network/networkManagers@2022-09-01' = {
       'SecurityAdmin'
     ]
     networkManagerScopes: {
-      managementGroups: [
-      ]
+      managementGroups: []
       subscriptions: [
         data.azapi_resource.subscription.id
       ]
@@ -42,8 +40,7 @@ resource securityAdminConfiguration 'Microsoft.Network/networkManagers/securityA
   parent: networkManager
   name: resource_name
   properties: {
-    applyOnNetworkIntentPolicyBasedServices: [
-    ]
+    applyOnNetworkIntentPolicyBasedServices: []
   }
 }
 

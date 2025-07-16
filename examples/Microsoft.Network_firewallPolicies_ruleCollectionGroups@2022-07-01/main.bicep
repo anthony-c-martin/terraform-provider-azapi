@@ -14,8 +14,7 @@ resource ruleCollectionGroup 'Microsoft.Network/firewallPolicies/ruleCollectionG
   name: resource_name
   properties: {
     priority: 500
-    ruleCollections: [
-    ]
+    ruleCollections: []
   }
 }
 

@@ -5,8 +5,7 @@ resource dataNetwork 'Microsoft.MobileNetwork/mobileNetworks/dataNetworks@2022-1
   parent: mobileNetwork
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource mobileNetwork 'Microsoft.MobileNetwork/mobileNetworks@2022-11-01' = {
@@ -32,8 +31,7 @@ resource service 'Microsoft.MobileNetwork/mobileNetworks/services@2022-11-01' = 
         serviceDataFlowTemplates: [
           {
             direction: 'Uplink'
-            ports: [
-            ]
+            ports: []
             protocol: [
               'ip'
             ]

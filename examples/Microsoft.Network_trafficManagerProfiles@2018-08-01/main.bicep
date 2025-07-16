@@ -10,8 +10,7 @@ resource trafficManagerProfile 'Microsoft.Network/trafficManagerProfiles@2018-08
       ttl: 30
     }
     monitorConfig: {
-      expectedStatusCodeRanges: [
-      ]
+      expectedStatusCodeRanges: []
       intervalInSeconds: 30
       path: '/'
       port: 443

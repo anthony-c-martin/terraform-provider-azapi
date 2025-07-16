@@ -34,8 +34,7 @@ resource site 'Microsoft.Web/sites@2021-02-01' = {
     enabled: true
     httpsOnly: false
     serverFarmId: serverfarm.id
-    siteConfig: {
-    }
+    siteConfig: {}
   }
 }
 

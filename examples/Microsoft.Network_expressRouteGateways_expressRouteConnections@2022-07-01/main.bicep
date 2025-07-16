@@ -37,8 +37,7 @@ resource expressRouteConnection 'Microsoft.Network/expressRouteGateways/expressR
       id: peering.id
     }
     expressRouteGatewayBypass: false
-    routingConfiguration: {
-    }
+    routingConfiguration: {}
     routingWeight: 0
   }
 }

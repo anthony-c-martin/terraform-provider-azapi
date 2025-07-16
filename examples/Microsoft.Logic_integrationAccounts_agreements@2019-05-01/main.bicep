@@ -156,8 +156,7 @@ resource agreement 'Microsoft.Logic/integrationAccounts/agreements@2019-05-01' =
 resource integrationAccount 'Microsoft.Logic/integrationAccounts@2019-05-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
   sku: {
     name: 'Standard'
   }

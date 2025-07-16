@@ -24,8 +24,7 @@ resource service 'Microsoft.MobileNetwork/mobileNetworks/services@2022-11-01' = 
         serviceDataFlowTemplates: [
           {
             direction: 'Uplink'
-            ports: [
-            ]
+            ports: []
             protocol: [
               'ip'
             ]

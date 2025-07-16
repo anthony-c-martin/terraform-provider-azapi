@@ -18,8 +18,7 @@ resource flexibleServer 'Microsoft.DBforPostgreSQL/flexibleServers@2023-06-01-pr
     highAvailability: {
       mode: 'Disabled'
     }
-    network: {
-    }
+    network: {}
     storage: {
       storageSizeGB: 32
     }

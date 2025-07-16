@@ -16,8 +16,7 @@ resource apiPortal 'Microsoft.AppPlatform/Spring/apiPortals@2023-05-01-preview' 
   parent: Spring
   name: 'default'
   properties: {
-    gatewayIds: [
-    ]
+    gatewayIds: []
     httpsOnly: false
     public: false
   }

@@ -20,8 +20,7 @@ resource contentKeyPolicy 'Microsoft.Media/mediaServices/contentKeyPolicies@2022
             '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
             keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
           }
-          requiredClaims: [
-          ]
+          requiredClaims: []
           restrictionTokenType: 'Swt'
         }
       }

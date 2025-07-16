@@ -68,14 +68,11 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-07-01' = {
   name: 'internal'
   properties: {
     addressPrefix: '10.0.2.0/24'
-    delegations: [
-    ]
+    delegations: []
     privateEndpointNetworkPolicies: 'Enabled'
     privateLinkServiceNetworkPolicies: 'Enabled'
-    serviceEndpointPolicies: [
-    ]
-    serviceEndpoints: [
-    ]
+    serviceEndpointPolicies: []
+    serviceEndpoints: []
   }
 }
 
@@ -83,11 +80,9 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
   location: location
   name: resource_name
   properties: {
-    additionalCapabilities: {
-    }
+    additionalCapabilities: {}
     applicationProfile: {
-      galleryApplications: [
-      ]
+      galleryApplications: []
     }
     diagnosticsProfile: {
       bootDiagnostics: {
@@ -122,17 +117,14 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
         }
         provisionVMAgent: true
         ssh: {
-          publicKeys: [
-          ]
+          publicKeys: []
         }
       }
-      secrets: [
-      ]
+      secrets: []
     }
     priority: 'Regular'
     storageProfile: {
-      dataDisks: [
-      ]
+      dataDisks: []
       imageReference: {
         offer: 'UbuntuServer'
         publisher: 'Canonical'
@@ -162,11 +154,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

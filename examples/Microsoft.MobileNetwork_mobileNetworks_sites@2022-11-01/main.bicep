@@ -16,7 +16,6 @@ resource site 'Microsoft.MobileNetwork/mobileNetworks/sites@2022-11-01' = {
   parent: mobileNetwork
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 

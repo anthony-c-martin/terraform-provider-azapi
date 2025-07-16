@@ -13,8 +13,7 @@ resource AAAA 'Microsoft.Network/privateDnsZones/AAAA@2018-09-01' = {
         ipv6Address: 'fd5d:70bc:930e:d008::7335'
       }
     ]
-    metadata: {
-    }
+    metadata: {}
     ttl: 300
   }
 }

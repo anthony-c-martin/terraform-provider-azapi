@@ -28,8 +28,7 @@ resource flowLog 'Microsoft.Network/networkWatchers/flowLogs@2023-11-01' = {
 resource networkWatchers 'Microsoft.Network/networkWatchers@2023-11-01' = {
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-09-01' = {
@@ -78,11 +77,9 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2022-07-01' = {
       ]
     }
     dhcpOptions: {
-      dnsServers: [
-      ]
+      dnsServers: []
     }
-    subnets: [
-    ]
+    subnets: []
   }
 }
 

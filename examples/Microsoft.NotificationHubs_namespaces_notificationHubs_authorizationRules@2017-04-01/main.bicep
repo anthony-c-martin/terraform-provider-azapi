@@ -28,7 +28,6 @@ resource notificationHub 'Microsoft.NotificationHubs/namespaces/notificationHubs
   parent: namespace
   location: location
   name: resource_name
-  properties: {
-  }
+  properties: {}
 }
 

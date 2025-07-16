@@ -5,8 +5,7 @@ resource dashboard 'Microsoft.Portal/dashboards@2019-01-01-preview' = {
   location: location
   name: resource_name
   properties: {
-    lenses: {
-    }
+    lenses: {}
   }
 }
 
